@@ -68,7 +68,7 @@ function saveButton(){
     const currenBalance = parseFloat(balanceText);
     const remainingBalance = document.getElementById("remaining-balance");
     // Check if you have enough to save 
-    if (currenBalance > savePercentage) {
+    if (currenBalance >= savePercentage) {
         remainingBalance.innerText = currenBalance - parseFloat(calculatedSavings);
     }
     else {  
