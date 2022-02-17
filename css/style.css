@@ -1,8 +1,30 @@
+/* Header: Digital Wallet */
 #main-header{
     color: rgb(13, 88, 13);
     padding-top: 30px;
 } 
 
-.green-box{
-    background-color: rgb(229, 243, 229);
+/* Hide all error msgs initially */
+/* #notify-save {
+    display: none;
+} 
+
+#notify-expenses {
+    display: none;
+} 
+
+#notify-neg {
+    display: none;
+} 
+
+#notify-string {
+    display: none;
+}  */
+
+.notify {
+    display: none;
 }
+
+
+
+
