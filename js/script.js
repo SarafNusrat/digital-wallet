@@ -1,5 +1,24 @@
+function getInputValue(inputId){
+    debugger;
+    const inputField = document.getElementById(inputId);
+    const inputAmountText = inputField.value;
+    const amountValue = parseFloat(inputAmountText);
+    if (amountValue >= 0) {
+        return amountValue;
+    }
+    else {
+        const negStringMessage = document.getElementById("notify-negString");
+        negStringMessage.style.display = "block";
+        return -1;
+    }
+}
+
+
 function calculateButton(){
     const income = getInputValue("income");
+    if (income == -1) {
+        return;
+    }
     const totalExpense = addAllExpense();
     console.log(totalExpense);
     if (totalExpense == 0) { 
@@ -18,25 +37,16 @@ function calculateButton(){
     }
 }
 
-function getInputValue(inputId){
-    const inputField = document.getElementById(inputId);
-     const inputAmountText = inputField.value;
-     const amountValue = parseFloat(inputAmountText);
-     verifyInput(amountValue);
-     return amountValue;
-}
-
 function addAllExpense() {
     const foodExp = getInputValue("food-exp");
     const rentExp = getInputValue("rent-exp");
     const clothesExp = getInputValue("clothes-exp");
-    if (foodExp < 0 || rentExp < 0 || clothesExp < 0) {
-        return 0;
-    }
-    else {
+    if (foodExp >= 0 && rentExp >= 0 && clothesExp >= 0) {
         const totalExpense = foodExp + rentExp + clothesExp;
         return totalExpense;
     }
+    // foodExp == false || rentExp == false || clothesExp == false) {
+        else return 0;
 }
 
 function saveButton(){
@@ -46,7 +56,7 @@ function saveButton(){
     const savePercentage = getInputValue("save-percentage");
     // calculate savings 
     const savingAmount = document.getElementById("saving-amount");
-    if (savePercentage < 0) 
+    if (savePercentage < 0 || savePercentage == false) 
     {
         return;
     }
@@ -68,17 +78,5 @@ function saveButton(){
 }
 
 
-function verifyInput(amountValue) {
-    debugger;
-
-    if (amountValue >= 0) {
-        return amountValue;
-    }
-    else {
-        const negStringMessage = document.getElementById("notify-negString");
-        negStringMessage.style.display = "block";
-        return;
-    }
-}
 
 
