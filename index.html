@@ -32,7 +32,7 @@
 
                         <!-- Expenses Input -->
                         <h6 class="fw-bolder">Expenses</h6>
-                        <h6>Food:       <input id="food-exp" class="border border-success" type="text"></h6>
+                        <h6>Food: <input id="food-exp" class="border border-success" type="text"></h6>
                         <h6>Rent:      <input id="rent-exp" class="border border-success" type="text"></h6>
                         <h6>Clothes:      <input id="clothes-exp"  class="border border-success" type="text"></h6>
                         <br>
@@ -49,12 +49,11 @@
                 </div>
             </section>
             <!-- Error Messages-->
-            <section class="pt-4 ps-5 pe-5">
-                    <div class="fw-normal border border-success border-5 rounded">
-                        <p class="notify" id = "notify-neg">❌ Sorry! You cannot type a negative number.</p>
-                        <p class="notify" id = "notify-string">❌ Sorry! You cannot type a string.</p>
-                        <p class="notify" id = "notify-save">❌ Sorry! You don't have enough money to save.</p>
-                        <p class="notify" id = "notify-expenses">❌ Sorry! Your total expenses exceeded your income.</p>
+            <section class="pt-4 ps-5 pe-5 pb-3 ms-5 me-5">
+                    <div>
+                        <p class="notify fw-normal border border-success border-3 text-center bg-success text-white" id = "notify-negString">❌ Sorry! You cannot type a negative number or a string. Type again.</p>
+                        <p class="notify fw-normal border border-success border-3 text-center bg-success text-white" id = "notify-save">❌ Sorry! You don't have enough money to save.</p>
+                        <p class="notify fw-normal border border-success border-3 text-center bg-success text-white" id = "notify-expenses">❌ Sorry! Your total expenses exceeded your income.</p>
                     </div>
             </section>
     </main>

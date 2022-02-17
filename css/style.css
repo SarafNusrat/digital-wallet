@@ -5,22 +5,6 @@
 } 
 
 /* Hide all error msgs initially */
-/* #notify-save {
-    display: none;
-} 
-
-#notify-expenses {
-    display: none;
-} 
-
-#notify-neg {
-    display: none;
-} 
-
-#notify-string {
-    display: none;
-}  */
-
 .notify {
     display: none;
 }
