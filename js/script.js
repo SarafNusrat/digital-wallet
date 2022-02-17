@@ -1,8 +1,9 @@
+// Function to get values from input boxes
 function getInputValue(inputId){
-    debugger;
     const inputField = document.getElementById(inputId);
     const inputAmountText = inputField.value;
     const amountValue = parseFloat(inputAmountText);
+    // check for proper input
     if (amountValue >= 0) {
         return amountValue;
     }
@@ -13,7 +14,7 @@ function getInputValue(inputId){
     }
 }
 
-
+// event handler for Calculate Button
 function calculateButton(){
     const income = getInputValue("income");
     if (income == -1) {
@@ -37,6 +38,7 @@ function calculateButton(){
     }
 }
 
+// Funtion to add all expenses
 function addAllExpense() {
     const foodExp = getInputValue("food-exp");
     const rentExp = getInputValue("rent-exp");
@@ -45,12 +47,11 @@ function addAllExpense() {
         const totalExpense = foodExp + rentExp + clothesExp;
         return totalExpense;
     }
-    // foodExp == false || rentExp == false || clothesExp == false) {
-        else return 0;
+    else return 0;
 }
 
+// event handler for Save Button
 function saveButton(){
-    debugger;
     // get income and save input value 
     const income = getInputValue("income");
     const savePercentage = getInputValue("save-percentage");
@@ -67,7 +68,6 @@ function saveButton(){
     const currenBalance = parseFloat(balanceText);
     const remainingBalance = document.getElementById("remaining-balance");
     // Check if you have enough to save 
-    debugger;
     if (currenBalance > savePercentage) {
         remainingBalance.innerText = currenBalance - parseFloat(calculatedSavings);
     }
@@ -76,7 +76,3 @@ function saveButton(){
         saveMessage.style.display = "block";
     }
 }
-
-
-
-
