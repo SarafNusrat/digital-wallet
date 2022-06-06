@@ -52,6 +52,7 @@ function addAllExpense() {
 
 // event handler for Save Button
 function saveButton(){
+    debugger;
     // get income and save input value 
     const income = getInputValue("income");
     const savePercentage = getInputValue("save-percentage");
@@ -68,7 +69,7 @@ function saveButton(){
     const currenBalance = parseFloat(balanceText);
     const remainingBalance = document.getElementById("remaining-balance");
     // Check if you have enough to save 
-    if (currenBalance >= savePercentage) {
+    if (currenBalance >= calculatedSavings) {
         remainingBalance.innerText = currenBalance - parseFloat(calculatedSavings);
     }
     else {  
